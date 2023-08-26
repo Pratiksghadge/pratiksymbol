@@ -1,72 +1,554 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- 
+    Fix - use no
+    hug(tevdech jagha ghnr) - width nhi dey che, height pn
+    fill(parat che jagha) - 100%;
+ -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="css/Resume.css">
+    <title>Document</title>
     <style>
-        *{
-            padding: 0;
+        * {
             margin: 0;
+            padding: 0;
             box-sizing: border-box;
         }
-        body{
-            background: #F5F5F5;
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 98vw;
+            min-height: 98vh;
+        }
+
+        .Resume {
+            display: flex;
+            background: #FFF;
+            align-items: flex-start;
+        }
+
+        .left {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            align-items: flex-start;
+        }
+
+        img {
+            border-radius: 16px;
+            border: 1px solid #FDFDFD;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .education {
+            background: #F7F3D7;
+            display: flex;
+            align-self: stretch;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            background: #F7F1EB;
+        }
+
+        .details {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+
+        .skills {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+            background: #F2F5F7;
+        }
+
+        .education>.title {
+            text-transform: uppercase;
+            align-self: stretch;
+            font-family: Inter;
+            color: #937131;
+            font-weight: 700;
+        }
+
+        .education-record {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+        }
+
+        .education-record>p {
+            align-self: stretch;
+            color: #534C40;
+            font-weight: 600;
+            line-height: 143.2%;
+        }
+
+        .contact {
+            background: #F7F1EB;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+        }
+
+        .contact>.title {
+            align-self: stretch;
+            color: #272421;
+            font-family: Inter;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .contact-record>p {
+            color: #534940;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 143.2%;
+        }
+
+        .contact span {
+            color: #534940;
+            font-family: Inter;
+            font-weight: 500;
+            line-height: 143.2%;
+        }
+
+        .skills {
+            background: #F2F5F7;
+            display: flex;
+            align-self: stretch;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .skills>.title {
+            align-self: stretch;
+            color: #012;
+            font-family: Inter;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+
+        }
+
+        .skills-record {
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
+            align-self: stretch;
+        }
+
+        .skills-record>.row {
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+        }
+        .skills-record>.row>div {
+            width: 100%;
+        }
+
+        .skills-record p {
+            color: #404953;
+            font-family: Inter;
+            font-weight: 600;
+            line-height: 143.2%;
+        }
+
+        .skills-record span {
+            color: #404953;
+            font-family: Inter;
+            font-weight: 400;
+            line-height: 143.2%;
+        }
+
+        .right>.details {
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            align-self: stretch;
+
+        }
+
+        .name {
+            align-self: stretch;
+            color: #000;
+            font-family: Inter;
+            font-weight: 600;
+        }
+
+        .post {
+            align-self: stretch;
+            color: #937131;
+            font-family: Inter;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .description {
+            align-self: stretch;
+            color: #000;
+            font-family: Inter;
+            font-weight: 500;
+        }
+
+        /* Media Query For Mobile */
+        @media only screen and (max-width: 425px) {
+            .Resume {
+                padding: 4px 8px;
+                gap: 4px;
+                width:100%;
+            }
+
+            .left {
+                width: 84.5px;
+                gap: 4px;
+            }
+
+            img {
+                width: 84.5px;
+                height: 96px;
+            }
+
+            .right {
+                gap: 4px;
+                width: 255px;
+            }
+
+            .education {
+                padding: 4px;
+                gap: 4px;
+                width: 100%;
+            }
+
+            .contact {
+                padding: 4px;
+            }
+
+            .details {
+                gap: 4px;
+                width: 100%;
+            }
+
+            .skills {
+                gap: 8px;
+                padding: 10px 4px;
+            }
+
+            .education>.title {
+                font-size: 8px;
+                letter-spacing: 2px;
+                width:100%;
+            }
+
+            .education-record {
+                gap: 10px;
+                width: 100%;
+            }
+
+            .education-record>p {
+                font-size: 8px;
+                width: 100%;
+            }
+
+            .contact {
+                padding: 4px;
+                width: 100%;
+            }
+
+            .contact>.title {
+                font-size: 8px;
+                width: 100%;
+            }
+
+            .contact-record {
+                font-size: 8px;
+                width: 100%;
+            }
+
+            .contact span {
+                font-size: 8px;
+            }
+
+            .skills {
+                gap: 8px;
+                padding: 10px 4px;
+                width: 100%;
+            }
+
+            .skills>.title {
+                font-size: 8px;
+                width: 100%;
+            }
+
+            .skills-record {
+                gap: 12px;
+                width: 100%;
+            }
+
+            .skills-record>.row {
+                gap: 10px;
+                align-self: stretch;
+                width: 100%;
+            }
+            
+
+            .skills-record p {
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .skills-record span {
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .right>.details {
+                gap: 4px;
+            }
+
+            .name {
+                font-size: 28px;
+                width: 100%;
+            }
+
+            .post {
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .description {
+                font-size: 8px;
+                width: 100%;
+            }
+        }
+
+        /* Media Query For Desktop */
+        @media only screen and (min-width: 426px) {
+            .Resume {
+                padding: 12px 24px;
+                gap: 10px;
+            }
+
+            img {
+                width: 169px;
+                height: 192px;
+            }
+
+            .left {
+                width: 169px;
+                gap: 16px;
+            }
+
+            .right {
+                width: 373px;
+                gap: 12px;
+            }
+
+            .education {
+                padding: 10px;
+                gap: 10px;
+                width: 100%;
+            }
+
+            .details {
+                gap: 4px;
+                width: 100%;
+            }
+
+            .skills {
+                padding: 16px 10px;
+                gap: 20px;
+            }
+
+            .education>.title {
+                font-size: 14px;
+                letter-spacing: 2px;
+                width: 100%;
+            }
+
+            .education-record {
+                gap: 16px;
+                width: 100%;
+            }
+
+            .education-record>p {
+                font-size: 12px;
+                width: 100%;
+            }
+
+            .contact {
+                padding: 10px;
+                gap: 4px;
+                width: 100%;
+            }
+
+            .contact>.title {
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .contact-record {
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .contact span {
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .skills {
+                padding: 16px 10px;
+                gap: 20px;
+                width: 100%;
+            }
+
+            .skills>.title {
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .skills-record {
+                gap: 12px;
+            }
+
+            .skills-record>.row {
+                gap: 16px;
+            }
+
+            .skills-record p {
+                font-size: 13px;
+                width: 100%;
+            }
+
+            .skills-record span {
+                font-size: 10px;
+                width: 100%;
+            }
+
+            .right>.details {
+                gap: 4px;
+                width: 100%;
+            }
+
+            .name {
+                font-size: 52px;
+                width: 100%;
+            }
+
+            .post {
+                font-size: 14px;
+                width: 100%;
+            }
+
+            .description {
+                font-size: 13px;
+                width: 100%;
+            }
         }
     </style>
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> -->
 </head>
+
 <body>
-    <div id="f">
-        <div id="frame1">
-            <img class="img" src="images/pratik.jpg">
-                <div id="menu1">
-                    <p class="menu11">Education</p>
-                    <p class="menu12">2017<br><h style="color: black;"> Anand Gurukul School, Wagholi(Wadebholi)</h><br> SSC - 63.80 %</p><hr>
-                    <p class="menu13">2017-2019<br><a href="https://bjscollegewagholi.business.site/" style="color: black;"> Bharatiya Jain sanghatana's Arts, Commerce & Science College</a><br> HSC - 58.62</p><hr>
-                    <p class="menu14">2019-2022<br><a href="https://bjscollegewagholi.business.site/" style="color: black;"> Bharatiya Jain sanghatana's Arts, Commerce & Science College</a><br> BSC - 64.73 CGPA</p><hr>
-                    <p class="menu15">2022-2024<br><a href="https://dypsom.com/" style="color: black;">Dr D Y PATIL SCHOOL OF MCA</a><br> 1-semister, present</p>
-                </div>    
-                <div id="menu2">
-                    <P class="menu21">Contact</P>
-                    <P class="menu22">Phone<br><a href="tel:+7558233374" style="color:black">(+91)7558233374</a></P>
-                    <P class="menu23" >Email<br><a href="mailto:ghadgepratik317@gmail.com" style="color: black;">ghadgepratik317@gmail.com</a></P>
-                    <p class="menu24">Address<br><h style="color: black;">Pune, Maharashtra, India</h></p>
+    <div class="Resume">
+        <div class="left">
+            <img src="images/pratik.jpg" alt="Pratik Profile">
+            <div class="education">
+                <p class="title">Education</p>
+                <div class="education-record">
+                    <p>2017 Anand Gurukul School, Wagholi(Wadebholi) SSC - 63.80 %</p>
+                    <p>2017-2019 Bharatiya Jain sanghatana's Arts, Commerce & Science College HSC - 58.62</p>
+                    <p>2019-2022 Bharatiya Jain sanghatana's Arts, Commerce & Science College BSC - 64.73 CGPA</p>
+                    <p>2022-2024 Dr D Y PATIL SCHOOL OF MCA 1-semister, present</p>
                 </div>
-        </div>
-        <div id="frame2">
-            <div id="menu3">
-                <p class="menu31">Pratik</p>
-                <p class="menu32">Ghadge</p>
             </div>
-                <h id="h1">Fresher</h>
-                <p class="h12">To obtain an entry-level position in industry/field where I can leverage my relevant skills/education to contribute to the success of the organization while continuously learning and growing in a dynamic professional environment.</p>
-            <div id="menu4">
-                <h id="h2">Skills</h>
-                <div id="submenu1">
-                    <div id="sub1">
-                        <p class="sub11">Figma<br> design prototype</p>
-                        <p class="sub12">VS Code<br> code editor</p>
-                        <p class="sub13">Java<br> online code editor</p>
+            <div class="contact">
+                <p class="title">Contact</p>
+                <div class="contact-record">
+                    <div>
+                        <p>Phone</p><span> (+91) 7558233374</span>
                     </div>
-                    <div id="sub2">
-                        <p class="sub21">Pycharm<br> python editor</p>
-                        <p class="sub22">Html 5<br> structural Design</p>
-                        <p class="sub23">MySql<br> relational database</p>
+                    <div>
+                        <p>Email</p><span> ghadgepratik317@gmail.com</span>
                     </div>
-                    <div id="sub3">
-                        <p class="sub31">CSS<br> style design</p>
-                        <p class="sub32">Python<br> programming</p>
+                    <div>
+                        <p>Address</p><span> At post : patethan, Tal:daund, Dist : pune</span>
                     </div>
-                </div>       
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="details">
+                <p class="name">Pratik Ghadge </p>
+                <p class="post">Fresher</p>
+                <p class="description">To obtain an entry-level position in industry/field where I can leverage my
+                    relevant skills/education to contribute to the success of the organization while continuously
+                    learning and growing in a dynamic professional environment.</p>
+            </div>
+            <div class="skills">
+                <p class="title">Sills</p>
+                <div class="skills-record">
+                    <div class="row">
+                        <div>
+                            <p>Figma</p><span>design prototype</span>
+                        </div>
+                        <div>
+                            <p>VS Code</p><span>code editor</span>
+                        </div>
+                        <div>
+                            <p>Java</p><span>online code editor</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>Pycharm</p><span>python editor</span>
+                        </div>
+                        <div>
+                            <p>Html 5</p><span>structural design</span>
+                        </div>
+                        <div>
+                            <p>CSS</p><span>style design</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <p>MySql</p><span>relational database</span>
+                        </div>
+                        <div>
+                            <p>Python</p><span>Programming</span>
+                        </div>
+                        <div>
+                            <p>JavaScript</p><span>Scripting language</span>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
