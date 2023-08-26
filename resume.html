@@ -27,7 +27,7 @@
 
         .Resume {
             display: flex;
-            background: #FFF;
+            background-color: aliceblue;
             align-items: flex-start;
         }
 
@@ -55,6 +55,7 @@
             align-self: stretch;
             flex-direction: column;
             align-items: flex-start;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
         .contact {
@@ -63,6 +64,7 @@
             align-items: flex-start;
             align-self: stretch;
             background: #F7F1EB;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
         .details {
@@ -70,7 +72,6 @@
             flex-direction: column;
             align-items: flex-start;
             align-self: stretch;
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
         .skills {
@@ -79,6 +80,8 @@
             align-items: flex-start;
             align-self: stretch;
             background: #F2F5F7;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
         }
 
         .education>.title {
@@ -164,6 +167,7 @@
             align-items: flex-start;
             width: 100%;
         }
+
         .skills-record>.row>div {
             width: 100%;
         }
@@ -183,7 +187,6 @@
         }
 
         .right>.details {
-            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -196,6 +199,7 @@
             color: #000;
             font-family: Inter;
             font-weight: 600;
+            box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
         }
 
         .post {
@@ -214,12 +218,20 @@
             font-weight: 500;
         }
 
+        hr {
+            width: 100%;
+            height: 1px;
+            border: 0;
+            background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(9, 84, 132), rgba(0, 0, 0, 0));
+        }
+
+
         /* Media Query For Mobile */
         @media only screen and (max-width: 425px) {
             .Resume {
                 padding: 4px 8px;
                 gap: 4px;
-                width:100%;
+                width: 100%;
             }
 
             .left {
@@ -260,7 +272,7 @@
             .education>.title {
                 font-size: 8px;
                 letter-spacing: 2px;
-                width:100%;
+                width: 100%;
             }
 
             .education-record {
@@ -313,7 +325,7 @@
                 align-self: stretch;
                 width: 100%;
             }
-            
+
 
             .skills-record p {
                 font-size: 10px;
@@ -337,11 +349,13 @@
             .post {
                 font-size: 10px;
                 width: 100%;
+                margin-top: 15px;
             }
 
             .description {
                 font-size: 8px;
                 width: 100%;
+                margin-bottom: 4px;
             }
         }
 
@@ -364,7 +378,7 @@
 
             .right {
                 width: 373px;
-                gap: 12px;
+                gap: 19px;
             }
 
             .education {
@@ -462,11 +476,13 @@
             .post {
                 font-size: 14px;
                 width: 100%;
+                margin-top: 33px;
             }
 
             .description {
                 font-size: 13px;
                 width: 100%;
+                margin-top: 12px;
             }
         }
     </style>
@@ -479,21 +495,28 @@
             <div class="education">
                 <p class="title">Education</p>
                 <div class="education-record">
+                    <hr>
                     <p>2017 Anand Gurukul School, Wagholi(Wadebholi) SSC - 63.80 %</p>
+                    <hr>
                     <p>2017-2019 Bharatiya Jain sanghatana's Arts, Commerce & Science College HSC - 58.62</p>
+                    <hr>
                     <p>2019-2022 Bharatiya Jain sanghatana's Arts, Commerce & Science College BSC - 64.73 CGPA</p>
+                    <hr>
                     <p>2022-2024 Dr D Y PATIL SCHOOL OF MCA 1-semister, present</p>
                 </div>
             </div>
             <div class="contact">
                 <p class="title">Contact</p>
                 <div class="contact-record">
+                    <hr>
                     <div>
                         <p>Phone</p><span> (+91) 7558233374</span>
                     </div>
+                    <hr>
                     <div>
                         <p>Email</p><span> ghadgepratik317@gmail.com</span>
                     </div>
+                    <hr>
                     <div>
                         <p>Address</p><span> At post : patethan, Tal:daund, Dist : pune</span>
                     </div>
@@ -508,45 +531,50 @@
                     relevant skills/education to contribute to the success of the organization while continuously
                     learning and growing in a dynamic professional environment.</p>
             </div>
-            <div class="skills">
-                <p class="title">Sills</p>
-                <div class="skills-record">
-                    <div class="row">
-                        <div>
-                            <p>Figma</p><span>design prototype</span>
-                        </div>
-                        <div>
-                            <p>VS Code</p><span>code editor</span>
-                        </div>
-                        <div>
-                            <p>Java</p><span>online code editor</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div>
-                            <p>Pycharm</p><span>python editor</span>
-                        </div>
-                        <div>
-                            <p>Html 5</p><span>structural design</span>
-                        </div>
-                        <div>
-                            <p>CSS</p><span>style design</span>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div>
-                            <p>MySql</p><span>relational database</span>
-                        </div>
-                        <div>
-                            <p>Python</p><span>Programming</span>
-                        </div>
-                        <div>
-                            <p>JavaScript</p><span>Scripting language</span>
-                        </div>
-                    </div>
+            <div style="display: flex;width: 100%;">
+                <div style="width: 1px;height: 200px;background: linear-gradient(#000, #fff);"></div>
+                <div class="skills">
 
+                    <p class="title">Sills</p>
+                    <div class="skills-record">
+                        <div class="row">
+                            <div>
+                                <p>Figma</p><span>design prototype</span>
+                            </div>
+                            <div>
+                                <p>VS Code</p><span>code editor</span>
+                            </div>
+                            <div>
+                                <p>Java</p><span>online code editor</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <p>Pycharm</p><span>python editor</span>
+                            </div>
+                            <div>
+                                <p>Html 5</p><span>structural design</span>
+                            </div>
+                            <div>
+                                <p>CSS</p><span>style design</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <p>MySql</p><span>relational database</span>
+                            </div>
+                            <div>
+                                <p>Python</p><span>Programming</span>
+                            </div>
+                            <div>
+                                <p>JavaScript</p><span>Scripting language</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+
         </div>
     </div>
 </body>
