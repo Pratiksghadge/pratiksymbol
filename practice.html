@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
     <style>
         *{
@@ -25,8 +26,8 @@
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                padding: 0 5vw;
-
+                padding: 0 3vw;
+           
                 .nav-part2{
                     display: flex;
                     align-items: center;
@@ -55,23 +56,34 @@
                 border: none;
                 border-radius: 5px;
                 font-weight: 600;
+                cursor: pointer;
             }
             .content button{
                 background-color: lightseagreen;
                 color: #fff;
                 border: none;
+                cursor: pointer;
+            }
+            a{
+                text-decoration: none;
+            }
+            #check{
+                display: none;
             }
         }
 
         @media (min-width: 600px) {
-            .nav i {
+            .checkbtn {
                 display: none; 
             }
             .nav h2{
                 font-size: 6vw;
             }
-            .nav h4{
+            .nav ul{
                 font-size: 2vw;
+                display: contents;
+                list-style: none;   
+                text-decoration: none;
             }
             .nav{
                 height: 100px;
@@ -83,7 +95,7 @@
                 padding: 64px 38px;
             }
             .left h1{
-                font-size: 6vw;
+                font-size: 5vw;
                 line-height: 6vw;
             }
             .content{
@@ -99,7 +111,7 @@
                 width: 100%;
             }
             .content button{
-                padding: 2.1vw 4.3vw;
+                padding: 1.1vw 2.3vw;
                 border-radius: 5px;
                 font-weight: 700;
             }
@@ -115,13 +127,36 @@
             .nav h2{
                 font-size: 6vw;
             }
-            .nav h4{
-                font-size: 4vw;
-                display: none;
+            .checkbtn{
+                display: block;
+                font-size: 20px;
+                line-height: 80px;
+                cursor: pointer;
             }
-            .nav i{
+            .nav-part2 ul{
                 font-size: 4vw;
-                display: inline;
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: orange;
+                top: 80px;
+                right: -100%;
+                text-align: center;
+                transition: .5s;
+            }
+            .nav-part2 ul li{
+                display: block;
+                line-height: 50px;
+            }
+            .nav-part2 ul li a{
+                font-size: 20px;
+            }
+            a:hover,a.active{
+                background: none;
+                color: #0082e6;
+            }
+            #check:checked ~ ul{
+                left: 0;
             }
             .nav button{
                 display: none;
@@ -165,27 +200,30 @@
         <div class="nav">
             <h2>logo</h2>
             <div class="nav-part2">
-                <h4>Rfgvev</h4>
-                <h4>Efwefawf</h4>
-                <h4>Grdbdrt</h4>
-                <h4>Tdfbdrt</h4>
-                <h4>Htjrtr</h4>
-                <button>Sign in</button>
-                <i class="ri-menu-3-line"></i>
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn"><i class="ri-menu-3-line"></i></label>
+                <ul>
+                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Apex</a></li>
+                <li><a href="">Prime</a></li>
+                <li><a href="">Contact</a></li>
+                <li><a href="">About</a></li>
+                </ul>
+                <button class="Sign">Sign in</button>
             </div>
         </div>
         <div class="content">
             <div class="left">
                 <h1>learn from the <span>coolest</span> ewff efwcwef trbd.</h1>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus distinctio, delectus consectetur quas dicta sapiente! Molestias incidunt iste exercitationem. Illum quo adipisci natus quos, voluptatum a culpa iste minus maxime?</p>
-                <button>Explore Now</button>
+                <button class="Sign">Explore Now</button>
             </div>
             <div class="right">
-                <img src="images/back.jpg" alt="pic">
+                <img src="practice.jpg" alt="pic">
             </div>
         </div>
     </div>
 
-
+    <script src="practice.js"></script>
 </body>
 </html>
