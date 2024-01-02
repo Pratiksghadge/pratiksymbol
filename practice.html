@@ -27,12 +27,6 @@
                 align-items: center;
                 justify-content: space-between;
                 padding: 0 3vw;
-           
-                .nav-part2{
-                    display: flex;
-                    align-items: center;
-                    gap: 4vw;
-                }
             }
             .content{
                 display: flex;
@@ -67,13 +61,13 @@
             a{
                 text-decoration: none;
             }
-            #check{
-                display: none;
+            .nav-part2 ul{
+                list-style-type: none;
             }
         }
 
         @media (min-width: 600px) {
-            .checkbtn {
+            .nav i {
                 display: none; 
             }
             .nav h2{
@@ -88,6 +82,11 @@
             .nav{
                 height: 100px;
                 width: 100%;
+            }
+            .nav-part2{
+                display: flex;
+                align-items: center;
+                gap: 4vw;
             }
             .left{
                 height: 100%;
@@ -127,36 +126,24 @@
             .nav h2{
                 font-size: 6vw;
             }
-            .checkbtn{
-                display: block;
-                font-size: 20px;
-                line-height: 80px;
+            .nav i{
                 cursor: pointer;
             }
-            .nav-part2 ul{
-                font-size: 4vw;
+            .nav-part2{
                 position: fixed;
-                width: 100%;
+                top: 0;
+                right: 0;
                 height: 100vh;
-                background: orange;
-                top: 80px;
-                right: -100%;
-                text-align: center;
-                transition: .5s;
-            }
-            .nav-part2 ul li{
-                display: block;
-                line-height: 50px;
-            }
-            .nav-part2 ul li a{
-                font-size: 20px;
-            }
-            a:hover,a.active{
-                background: none;
-                color: #0082e6;
-            }
-            #check:checked ~ ul{
-                left: 0;
+                width: 250px;
+                z-index: 999;
+                background-color: rgb(255, 255, 255, -0.8);
+                backdrop-filter: blur(7px);
+                box-shadow: -1px 0 10px #000;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                line-height: 3;
             }
             .nav button{
                 display: none;
@@ -191,6 +178,23 @@
                 border-radius: 1vw;
                 font-weight: 700;
             }
+            #sidebar {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: -100;
+                width: 250px;
+                height: 100%;
+                padding: 20px;
+            }
+        
+            #sidebar ul {
+                list-style: none;
+                padding: 0;
+            }
+            #sidebar li {
+                margin-bottom: 10px;
+            }
         }
         
     </style>
@@ -199,18 +203,17 @@
     <div class="main">
         <div class="nav">
             <h2>logo</h2>
-            <div class="nav-part2">
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn"><i class="ri-menu-3-line"></i></label>
+            <i class="ri-menu-3-line" onclick=showSidebar()></i>
+            <nav class="nav-part2" id="sidebar">
                 <ul>
-                <li><a href="" class="active">Home</a></li>
+                <li><a href="">Home</a></li>
                 <li><a href="">Apex</a></li>
                 <li><a href="">Prime</a></li>
                 <li><a href="">Contact</a></li>
                 <li><a href="">About</a></li>
                 </ul>
                 <button class="Sign">Sign in</button>
-            </div>
+            </nav>
         </div>
         <div class="content">
             <div class="left">
