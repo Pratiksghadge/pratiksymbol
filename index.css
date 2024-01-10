@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 98vh;
+}
+
+.backgound {
+    flex-direction: column;
+    align-items: flex-end;
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    background: url(images/laptop.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 75%;
+    height: inherit;
+}
+
+.header {
+    background: #FFAD01;
+    display: flex;
+    align-self: stretch;
+    height: 13vh;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.link {
+    color: #000;
+    text-align: center;
+    width: auto;
+    font-family: Inter;
+    font-weight: 400;
+    text-decoration-line: underline;
+}
+
+.resume {
+    background: #FFAD01;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.resume>p {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.info {
+    background: #FFF;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+}
+
+.name {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.status {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.age {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.mail {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+
+}
+
+.martail {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.profile-pic {
+    position: absolute;
+}
+
+/* Media Query For Mobile */
+@media only screen and (max-width: 425px) {
+
+    .backgound {
+        padding: 48px 10px;
+        gap: 64px;
+    }
+
+    .header {
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .contact {
+
+        padding: 10px;
+        gap: 4px;
+        flex: 1 0 0;
+    }
+
+    .svg {
+        width: 15px;
+        height: 15px;
+    }
+
+    .contact-details {
+        justify-content: center;
+        gap: 4px;
+    }
+
+    .link {
+        height: 9px;
+        font-size: 7px;
+    }
+
+    .resume {
+        padding: 6px 27px;
+    }
+
+    .resume>p {
+        font-size: 9px;
+    }
+
+    .quote {
+        font-size: 6px;
+    }
+
+    .info {
+        width: 279px;
+        height: 191px;
+        padding-top: 72px;
+        gap: 8px;
+        bottom: 88px;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .name {
+        font-size: 20px;
+    }
+
+    .status {
+        font-size: 11px;
+    }
+
+    .age {
+        font-size: 7px;
+    }
+
+    .mail {
+        font-size: 7px;
+    }
+
+    .martail {
+        font-size: 6px;
+    }
+
+    .profile-pic {
+        height: 110px;
+        border-radius: 110px;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 426px) {
+
+    .backgound {
+        padding: 76px;
+        gap: 73px;
+    }
+
+    .header {
+        align-items: flex-start;
+    }
+
+    .contact {
+
+        padding: 20px;
+        gap: 12px;
+        flex: 1 0 0;
+    }
+
+    .svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .contact-details {
+        gap: 8px;
+        flex: 1 0 0;
+    }
+
+    .link {
+        height: 19px;
+        font-size: 18px;
+    }
+
+    .resume {
+        padding: 12px 50px;
+    }
+
+    .resume>p {
+        font-size: 25px;
+    }
+
+    .info {
+        padding-top: 81px;
+        gap: 12px;
+        width: 153vh;
+        bottom: 43px;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .status {
+        font-size: 25px;
+    }
+
+    .age {
+        font-size: 15px;
+    }
+
+    .mail {
+        font-size: 15px;
+    }
+
+    .martail {
+        font-size: 15px;
+    }
+
+    .profile-pic {
+        width: 182px;
+        height: 184px;
+        left: 585px;
+        bottom: 222px;
+        border-radius: 233px;
+    }
+}
