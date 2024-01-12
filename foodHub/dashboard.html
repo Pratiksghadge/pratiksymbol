@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 98vw;
+            height: 96vh;
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/pexels-luiz-eduardo-pacheco-18203253.jpg" alt="pic">
+
+    <script>        
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.body.style.transition = 'transform 2s';
+                document.body.style.transform = 'translateX(-100%)';
+
+                setTimeout(function() {
+                    window.location.href = 'food.html'; 
+                }, 1000); 
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>
