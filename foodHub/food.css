@@ -10,6 +10,7 @@ body {
     align-items: flex-start;
     background-image: url('images/food.jpg'); 
     transition: background-size 0.3s ease;
+
 }
 
 input.zoom-background {
