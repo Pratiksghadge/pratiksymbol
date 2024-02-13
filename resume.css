@@ -7,10 +7,16 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     width: 98vw;
     min-height: 98vh;
     flex-direction: column;
+}
+
+.click{
+    display: flex;
+    align-self: normal;
+    justify-content: flex-end;
 }
 
 .Resume {
