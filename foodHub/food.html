@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="food.css">
 </head>
 
@@ -15,10 +17,16 @@
             <h1 style=" font-weight: bolder; color: #974949;">Food Hub</h1>
         </div>
         <div class="option">
-            <h1>Home      </h1>
-            <a href="recipes.html"><h1>Recipes</h1></a>
-            <a href="blog.html"><h1>Blog</h1></a>
-            <a href="tel:+91 7558233374" ><h1>Contact</h1></a>
+            <i class="ri-menu-3-line" onclick=showSidebar()></i>
+            <nav class="nav-part2" id="sidebar">
+                <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="recipes.html">Recipes</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tel:+91 7558233374">Contact</a></li>
+                <li><a href="">About</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
     <div class="container">
@@ -40,6 +48,7 @@
         </div>
     </div>
     <script src="food.js"></script>
+    <script src="practice.js"></script>
 </body>
 
 </html>
