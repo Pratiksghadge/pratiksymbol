@@ -9,8 +9,6 @@ body {
     flex-direction: column;
     align-items: flex-start;
     background-image: url('images/food.jpg'); 
-    background-size: cover;
-    background-repeat: no-repeat;
     transition: background-size 0.3s ease;
 }
 
@@ -129,8 +127,8 @@ a{
     body{
         padding: 37px 51px;
         gap: 200px;
-        background-size: contain;
-        background-repeat: round;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     .nav-part2{
         display: flex;
@@ -152,6 +150,8 @@ a{
     body{
         padding: 14vw 7vw;
         gap: 49vh;
+        background-size: contain;
+        background-repeat: round;
     }
     .nav-part2{
         position: fixed;
