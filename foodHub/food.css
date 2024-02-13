@@ -6,10 +6,8 @@
 
 body {
     display: flex;
-    padding: 37px 51px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 200px;
     background-image: url('images/food.jpg'); 
     background-size: cover;
     background-repeat: no-repeat;
@@ -128,6 +126,12 @@ a{
 
 /* laptop*/
 @media (min-width: 600px) {
+    body{
+        padding: 37px 51px;
+        gap: 200px;
+        background-size: contain;
+        background-repeat: round;
+    }
     .nav-part2{
         display: flex;
         align-items: center;
@@ -145,6 +149,10 @@ a{
 
 /* phone */
 @media (max-width:600px) { 
+    body{
+        padding: 14vw 7vw;
+        gap: 49vh;
+    }
     .nav-part2{
         position: fixed;
         top: 0;
