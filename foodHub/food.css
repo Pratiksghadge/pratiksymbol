@@ -34,12 +34,6 @@ a{
         align-items: center;
         gap: 26px;
     }
-
-    & img {
-        width: 93px;
-        height: 93px;
-        border-radius: 65px;
-    }
     
     & h1 {
         color: #fff;
@@ -84,7 +78,6 @@ a{
         & h1 {
             color: #000;
             font-family: Inter;
-            font-size: 52px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -95,7 +88,6 @@ a{
             color: #000;
             align-self: stretch;
             font-family: Inter;
-            font-size: 24px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -144,6 +136,11 @@ a{
     .ri-menu-3-line{
         display: none;
     }
+    img {
+        width: 93px;
+        height: 93px;
+        border-radius: 65px;
+    }
 }
 
 /* phone */
@@ -163,6 +160,26 @@ a{
         align-items: center;
         justify-content: flex-start;
         line-height: 3;
+    }
+    .tag{
+        background-color: black;
+        border-radius: 7vw;
+    }
+    .upper h1 {
+        font-size: revert;
+    }
+    p{
+        font-size: larger;
+    }
+    img{
+        width: 11vw;
+        height: 6vh;
+        border-radius: 65px;
+    }
+    .tag h1{
+        font-weight: bolder;
+        color: #974949;
+        font-size: x-large;
     }
     #sidebar {
         display: none;
