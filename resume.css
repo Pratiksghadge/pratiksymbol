@@ -17,6 +17,7 @@ body {
     display: flex;
     align-self: normal;
     justify-content: flex-end;
+    margin-bottom: 11vw;
 }
 
 .Resume {
