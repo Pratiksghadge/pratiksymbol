@@ -16,7 +16,6 @@ body {
 .click{
     display: flex;
     align-self: normal;
-    justify-content: flex-end;
 }
 
 .Resume {
